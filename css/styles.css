@@ -1,0 +1,138 @@
+body{
+    background-color: #000;
+}
+.nav_container ul li{
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+.nav_btn{
+    font-weight: 500;
+}
+
+/* Landing Area */
+.landing_text h1{   
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    line-height: 72px;
+}
+
+.landing_text p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+.landing_subtext{
+    line-height: 28px;
+}
+@media screen and (max-width: 599px){
+    .landing_text h1{
+        line-height: 40px;
+    }
+    .landing_text p{
+        font-size: 15px;
+    }
+}
+
+/* About us */
+.abt_title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+}
+.abt-subtitle{
+    line-height: 28px;
+}
+@media screen and (max-width: 599px){
+    .abt_title{
+        font-size: 40px;
+    }
+}
+
+
+
+/* Service Area */
+.services_title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+}
+.services-subtitle{
+    line-height: 28px;
+}
+.main_services div h5{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+@media screen and (max-width: 599px){
+    .services_title{
+        font-size: 40px;
+    }
+}
+
+
+/* Latest Work Area*/
+
+.latest_work_title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+}
+@media screen and (max-width: 599px){
+    .latest_work_title{
+        font-size: 40px;
+    }
+}
+
+
+
+
+/* mobile_menu */
+.mobile_menu li{
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* hamburger_menu Area */
+.hamburger_menu{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+.hamburger_menu_top,
+.hamburger_menu_middle,
+.hamburger_menu_bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+.hamburger_menu_middle{
+    transform: translateY(7px)
+}
+.hamburger_menu_bottom{
+    transform: translateY(14px)   
+}
+
+.open_hamburger{
+    transform: rotate(90deg);
+    transform: translateY(0);
+}
+.open_hamburger .hamburger_menu_top{
+    transform: rotate(45deg) translateY(6px) translate(6px)
+}
+.open_hamburger .hamburger_menu_middle{
+    display: none;
+}
+
+.open_hamburger .hamburger_menu_bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px)
+}

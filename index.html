@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Maraya Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script></script>
+  </head>
+
+  <body>
+    <div
+      class="flex flex-row items-center justify-between px-5 md:px-10 bg-bg w-100 md:w-full py-2"
+    >
+      <div class="logo_container md:w-[277px] w-[150px] flex justify-start">
+        <img src="./images/logo.png" />
+      </div>
+      <div class="nav_container w-1/3 hidden md:block">
+        <nav class="text-[#fff]">
+          <ul class="flex flex-row justify-between text-center">
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Latest Work</li>
+            <li>Testimonials</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="w-1/5 flex justify-end items-center nav_btn md:block hidden">
+        <button class="p-3 bg-buttonColor rounded-full text-white w-[147px]">
+          Contact us
+        </button>
+      </div>
+
+      <button
+        id="hamburger"
+        class="hamburger_menu md:hidden block focus:outline-none"
+      >
+        <span class="hamburger_menu_top"></span>
+        <span class="hamburger_menu_middle"></span>
+        <span class="hamburger_menu_bottom"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Area -->
+
+    <div class="md:hidden hidden" id="mobile_menu">
+      <div
+        class="absolute flex flex-col items-center self-end py-8 mt-10 bg-bg text-textColor w-full"
+      >
+        <nav class="text-[#fff]">
+          <ul
+            class="mobile_menu flex flex-col justify-between text-center space-y-6"
+          >
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Latest Work</li>
+            <li>Testimonials</li>
+          </ul>
+        </nav>
+        <div class="w-1/3 flex justify-center nav_btn mt-5">
+          <button class="p-2 bg-buttonColor rounded-full text-white w-[140px]">
+            Contact us
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Landing Area -->
+    <div
+      class="landing_area_container flex flex-col-reverse px-5 w-100 md:flex-row md:justify-between md:items-center md:px-40 pt-[70px]"
+    >
+      <div class="landing_text md:text-left text-center">
+        <h1
+          class="text-[50px] md:text-[60px] text-textColor w-100 mt-10 md:mt-0 md:w-[436px] 
+        md:h-[218px] mb-7 md:mb-10"
+        >
+          Transform your online presence
+        </h1>
+        <p class="text-subTextColor w-100 md:w-[425px] landing_subtext mb-10">
+          At Maraya we create solutions that drive our business growth and
+          success. Our team of experts specializes in crafting unique digital
+          marketing strategies, engaging customer experiences and memorable
+          brand identities
+        </p>
+        <button
+          class="p-3 bg-buttonColor rounded-full text-white w-[147px] font-[500]"
+        >
+          Contact us
+        </button>
+      </div>
+      <div class="landing_img">
+        <img src="./images/landing.png" />
+      </div>
+    </div>
+
+    <!-- About us Area -->
+    <div
+      class="text-center pt-40 flex flex-col justify-center items-center px-5"
+    >
+      <div class="abt_title_container space-y-6 text-center">
+        <h1 class="abt_title text-textColor">About Us</h1>
+        <p
+          class="text-subTextColor w-100 md:w-[722px] abt-subtitle text-[15px] md:text-[18px]"
+        >
+          We are a full-service marketing agency, offering our clients a
+          comprehensive suite of services, from creative design and web
+          development to content marketing, social media management and email
+          campaigns. Maraya is committed to creating digital solutions that help
+          businesses reach their goals. We believe that with the right tools,
+          the sky is the limit
+        </p>
+        <button
+          class="p-3 bg-buttonColor rounded-full text-white w-[147px] font-[500]"
+        >
+          Learn more
+        </button>
+      </div>
+    </div>
+
+    <!-- Services Area -->
+    <div
+      class="text-center flex flex-col justify-center items-center pt-40 px-5"
+    >
+      <div class="service_area_container space-y-6">
+        <h1 class="services_title text-textColor">Our Services</h1>
+        <p
+          class="text-subTextColor w-100 md:w-[722px] services-subtitle text-[18px]"
+        >
+          Our team of creative professionals are experienced in crafting custom
+          digital solutions that drive customer engagement and loyalty.
+        </p>
+      </div>
+
+      <div
+        class="main_services flex flex-col md:flex-row items-center justify-between pt-20 space-y-5 md:pt-40 md:space-x-5 md:space-y-0"
+      >
+        <div
+          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
+        >
+          <h5 class="text-subTextColor md:text-[23px]">
+            Search Engine Optimization
+          </h5>
+        </div>
+        <div
+          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
+        >
+          <h5 class="text-subTextColor md:text-[23px]">
+            Website design & Development
+          </h5>
+        </div>
+        <div
+          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
+        >
+          <h5 class="text-subTextColor md:text-[23px]">Content Writing</h5>
+        </div>
+        <div
+          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
+        >
+          <h5 class="text-subTextColor md:text-[23px]">
+            Graphics & Social media Marketing
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest Works -->
+
+    <div
+      class="text-center flex flex-col justify-center items-center pt-40 px-5"
+    >
+      <div class="latest_work_container space-y-6">
+        <h1 class="latest_work_title text-textColor">Latest Work</h1>
+      <div class="flex flex-row justify-between items-center text-subTextColor space-x-8">
+        <p>All</p>
+        <p>Website Design</p>
+        <p>Mobile App</p>
+        <p>Design Branding</p>
+        <p>UI/UX</p>
+      </div>
+      </div>
+
+      
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
