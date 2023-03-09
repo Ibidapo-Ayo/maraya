@@ -182,3 +182,15 @@ body{
       border-radius: 0px !important;
         height: 2px !important;
   }
+
+  /* End Swiper Area */
+
+  /* Footer Area */
+  footer h1{
+    font-family: 'Rubik', sans-serif;      
+  }
+  .socials i{
+      color: #1EB25E;
+      font-size: 35px;
+  }
+  /* End Footer */

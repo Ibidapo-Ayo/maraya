@@ -18,7 +18,8 @@ tailwind.config = {
                 buttonColor: '#1EB25E',
                 textColor: "#fff",
                 subTextColor: '#C9C9C9',
-                serviceBoxBg: '#131313'
+                serviceBoxBg: '#131313',
+                footerColor: '#1EB25E'
             },
             screens: {
                 'sm': '640px',
