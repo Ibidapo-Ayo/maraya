@@ -186,7 +186,7 @@ body{
   /* End Swiper Area */
 
   /* Footer Area */
-  footer h1{
+  .footer{
     font-family: 'Rubik', sans-serif;      
   }
   .socials i{
