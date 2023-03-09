@@ -17,3 +17,13 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
+
+  var swiper = new Swiper(".Blog_mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
