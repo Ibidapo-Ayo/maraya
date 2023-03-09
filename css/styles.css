@@ -185,6 +185,12 @@ body{
 
   /* End Swiper Area */
 
+  /* Subscribe  */
+  .subscribe{
+    font-family: 'Rubik', sans-serif;      
+
+  }
+
   /* Footer Area */
   .footer{
     font-family: 'Rubik', sans-serif;      
@@ -193,6 +199,7 @@ body{
       color: #1EB25E;
       font-size: 35px;
   }
+
   @media screen and (max-width: 599px){
     .socials i{
         font-size: 20px;
