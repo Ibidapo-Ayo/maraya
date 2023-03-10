@@ -1,16 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body{
     background-color: #000;
 }
 .nav_container ul li{
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+    position: relative;
+    display: inline-block;
 }
 
 .nav_btn{
     font-weight: 500;
 }
 
+.nav_container ul li::before{
+    transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: #1EB25E;
+}
+.nav_container ul .active::before{
+    width: 70%;
+    bottom: -3px;
+}
 /* Landing Area */
+.landing_area_container{
+    background: url('../images/banner_bg.png');
+    background-size: cover;
+    background-position-x: 300px;
+    background-position-y: -250px;
+    background-repeat: no-repeat;
+    height: 770px !important;
+}
+@media screen and (max-width: 599px){
+    .landing_area_container{
+        background-size: cover;
+        background-position-x: -190px;
+    background-position-y: -100px;
+        height: 700px !important;
+    }
+}
 .landing_text h1{   
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
@@ -28,7 +61,7 @@ body{
 }
 @media screen and (max-width: 599px){
     .landing_text h1{
-        line-height: 40px;
+        line-height: 50px;
     }
     .landing_text p{
         font-size: 15px;
@@ -80,14 +113,27 @@ body{
     font-weight: 600;
     font-size: 60px;
 }
+.sub-text p{
+    font-size: 18px;
+}
 @media screen and (max-width: 599px){
     .latest_work_title{
         font-size: 40px;
     }
+    .sub-text p{
+        font-size: 15px;
+    }
 }
 
 
+/* End Latest work */
 
+/* Testimonial Area */
+.testimonial_title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
 
 /* mobile_menu */
 .mobile_menu li{
@@ -136,3 +182,71 @@ body{
 .open_hamburger .hamburger_menu_bottom{
     transform: rotate(-45deg) translateY(6px) translate(-6px)
 }
+
+
+/* Swiper Slider */
+
+.swiper{
+    width: 100% !important;
+    
+}
+  .swiper-slide {
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+
+  }
+  .swiper-wrapper{
+      z-index: 0 !important;
+  }
+  .swiper-pagination-bullet {
+    width: 30px !important;
+    background: #fff !important;
+    border-radius: 0px !important;
+      height: 2px !important;
+      margin-top: 50px !important;
+  }
+
+  .swiper-pagination-bullet-active{
+      width: 30px !important;
+      background: #fff !important;
+      border-radius: 0px !important;
+        height: 2px !important;
+  }
+.swiper-button-next{
+    top: -100px !important;
+    position: inherit !important;
+   
+}
+.swiper-button-next::after{
+    font-size: 20px !important;
+}
+  /* End Swiper Area */
+/* Blog */
+
+.blog{
+    font-family: 'Rubik', sans-serif;   
+}
+
+/* End of Blog */
+  /* Subscribe  */
+  .subscribe{
+    font-family: 'Rubik', sans-serif;      
+
+  }
+
+  /* Footer Area */
+  .footer{
+    font-family: 'Rubik', sans-serif;      
+  }
+  .socials i{
+      color: #1EB25E;
+      font-size: 35px;
+  }
+
+  @media screen and (max-width: 599px){
+    .socials i{
+        font-size: 20px;
+    }
+    
+  }
+  /* End Footer */

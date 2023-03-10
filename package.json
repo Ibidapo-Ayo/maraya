@@ -1,0 +1,16 @@
+{
+  "name": "maraya-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/styles.css -o ./css/tailwind.css",
+    "watch": "tailwindcss -i ./css/styles.css -o ./css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}

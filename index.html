@@ -1,195 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Maraya Landing Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script></script>
-  </head>
 
-  <body>
-    <div
-      class="flex flex-row items-center justify-between px-5 md:px-10 bg-bg w-100 md:w-full py-2"
-    >
-      <div class="logo_container md:w-[277px] w-[150px] flex justify-start">
-        <img src="./images/logo.png" />
-      </div>
-      <div class="nav_container w-1/3 hidden md:block">
-        <nav class="text-[#fff]">
-          <ul class="flex flex-row justify-between text-center">
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Latest Work</li>
-            <li>Testimonials</li>
-          </ul>
-        </nav>
-      </div>
-      <div class="w-1/5 flex justify-end items-center nav_btn md:block hidden">
-        <button class="p-3 bg-buttonColor rounded-full text-white w-[147px]">
-          Contact us
-        </button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Maraya Landing Page</title>
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/tailwind.css"/>
+  <link rel="stylesheet" href="./assets/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
 
-      <button
-        id="hamburger"
-        class="hamburger_menu md:hidden block focus:outline-none"
-      >
-        <span class="hamburger_menu_top"></span>
-        <span class="hamburger_menu_middle"></span>
-        <span class="hamburger_menu_bottom"></span>
+<body>
+  <div class="flex flex-row items-center justify-between px-5 md:px-10 bg-bg w-100 md:w-full py-2">
+    <div class="logo_container md:w-[277px] w-[150px] flex justify-start">
+      <img src="./images/logo.png" />
+    </div>
+    <div class="nav_container w-1/3 hidden md:block">
+      <nav class="text-[#fff]">
+        <ul class="flex flex-row justify-between text-center">
+          <li class="nav_link active">About Us</li>
+          <li class="nav_link">Services</li>
+          <li class="nav_link">Latest Work</li>
+          <li class="nav_link">Testimonials</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="w-1/5 flex justify-end items-center nav_btn md:block hidden">
+      <button class="p-3 bg-buttonColor rounded-full text-white w-[147px]">
+        Contact us
       </button>
     </div>
 
-    <!-- Mobile Menu Area -->
+    <button id="hamburger" class="hamburger_menu md:hidden block focus:outline-none">
+      <span class="hamburger_menu_top"></span>
+      <span class="hamburger_menu_middle"></span>
+      <span class="hamburger_menu_bottom"></span>
+    </button>
+  </div>
 
-    <div class="md:hidden hidden" id="mobile_menu">
-      <div
-        class="absolute flex flex-col items-center self-end py-8 mt-10 bg-bg text-textColor w-full"
-      >
-        <nav class="text-[#fff]">
-          <ul
-            class="mobile_menu flex flex-col justify-between text-center space-y-6"
-          >
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Latest Work</li>
-            <li>Testimonials</li>
-          </ul>
-        </nav>
-        <div class="w-1/3 flex justify-center nav_btn mt-5">
-          <button class="p-2 bg-buttonColor rounded-full text-white w-[140px]">
-            Contact us
-          </button>
-        </div>
-      </div>
-    </div>
+  <!-- Mobile Menu Area -->
 
-    <!-- Landing Area -->
-    <div
-      class="landing_area_container flex flex-col-reverse px-5 w-100 md:flex-row md:justify-between md:items-center md:px-40 pt-[70px]"
-    >
-      <div class="landing_text md:text-left text-center">
-        <h1
-          class="text-[50px] md:text-[60px] text-textColor w-100 mt-10 md:mt-0 md:w-[436px] 
-        md:h-[218px] mb-7 md:mb-10"
-        >
-          Transform your online presence
-        </h1>
-        <p class="text-subTextColor w-100 md:w-[425px] landing_subtext mb-10">
-          At Maraya we create solutions that drive our business growth and
-          success. Our team of experts specializes in crafting unique digital
-          marketing strategies, engaging customer experiences and memorable
-          brand identities
-        </p>
-        <button
-          class="p-3 bg-buttonColor rounded-full text-white w-[147px] font-[500]"
-        >
+  <div class="md:hidden hidden" id="mobile_menu">
+    <div class="absolute flex flex-col items-center self-end py-8 -mt-2 bg-bg text-textColor w-full">
+      <nav class="text-[#fff]">
+        <ul class="mobile_menu flex flex-col justify-between text-center space-y-6">
+          <li>About Us</li>
+          <li>Services</li>
+          <li>Latest Work</li>
+          <li>Testimonials</li>
+        </ul>
+      </nav>
+      <div class="w-1/3 flex justify-center nav_btn mt-5">
+        <button class="p-2 bg-buttonColor rounded-full text-white w-[140px]">
           Contact us
         </button>
       </div>
-      <div class="landing_img">
-        <img src="./images/landing.png" />
-      </div>
+    </div>
+  </div>
+
+  <!-- Landing Area -->
+  <div class="landing_area_container flex flex-col pt-20  px-5 w-100 md:items-center md:px-40">
+    <div class="landing_text text-center w-100 md:w-[828px]">
+      <h1 class="text-[40px] md:text-[56px] font-[600]  text-textColor w-100 mb-7 md:mb-10">
+       We help ambitious brands build sustainable and scalable growth
+      </h1>
+      <p class="text-textColor w-100 landing_subtext mb-10">
+        At Maraya we create solutions that drive our business growth and
+        success. Our team of experts specializes in crafting unique digital
+        marketing strategies, engaging customer experiences and memorable
+        brand identities
+      </p>
+     <div class="flex flex-row justify-center space-x-5 items-center">
+      <button class="p-3 bg-buttonColor rounded-full text-white w-[147px] font-[500]">
+        More on us
+      </button>
+      <button class="p-3 border-2 border-buttonColor rounded-full text-white w-[147px] font-[500]">
+       See our work
+      </button>
+     </div>
+    </div>
+  </div>
+
+  <!-- About us Area -->
+  <div class="pt-40 flex flex-col justify-start items-center px-5">
+    <div class="abt_title_container space-y-6 text-center">
+      <h1 class="abt_title text-textColor">About Us</h1>
+      <p class="text-subTextColor w-100 md:w-[722px] abt-subtitle text-[15px] md:text-[18px]">
+        We are a full-service marketing agency, offering our clients a
+        comprehensive suite of services, from creative design and web
+        development to content marketing, social media management and email
+        campaigns. Maraya is committed to creating digital solutions that help
+        businesses reach their goals. We believe that with the right tools,
+        the sky is the limit
+      </p>
+      <button class="p-3 bg-buttonColor rounded-full text-white w-[147px] font-[500]">
+        Learn more
+      </button>
+    </div>
+  </div>
+
+  <!-- Services Area -->
+  <div class="text-center flex flex-col justify-center items-center pt-40 px-5">
+    <div class="service_area_container space-y-6">
+      <h1 class="services_title text-textColor">Our Services</h1>
+      <p class="text-subTextColor w-100 md:w-[722px] services-subtitle text-[18px]">
+        Our team of creative professionals are experienced in crafting custom
+        digital solutions that drive customer engagement and loyalty.
+      </p>
     </div>
 
-    <!-- About us Area -->
-    <div
-      class="text-center pt-40 flex flex-col justify-center items-center px-5"
-    >
-      <div class="abt_title_container space-y-6 text-center">
-        <h1 class="abt_title text-textColor">About Us</h1>
-        <p
-          class="text-subTextColor w-100 md:w-[722px] abt-subtitle text-[15px] md:text-[18px]"
-        >
-          We are a full-service marketing agency, offering our clients a
-          comprehensive suite of services, from creative design and web
-          development to content marketing, social media management and email
-          campaigns. Maraya is committed to creating digital solutions that help
-          businesses reach their goals. We believe that with the right tools,
-          the sky is the limit
-        </p>
-        <button
-          class="p-3 bg-buttonColor rounded-full text-white w-[147px] font-[500]"
-        >
-          Learn more
-        </button>
+    <div class="main_services grid grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-2 pt-20 space-y-5 md:pt-40 md:gap-40 md:space-y-0">
+      <div class="flex flex-col w-[287px]  space-y-6 ">
+       <div class="w-[287px] h-[240px] rounded-[12px] space-y-3 bg-serviceBoxBg px-10 py-16">
+        <img src="./images/services/services_icon1.png" class="w-[74px]" alt="SEO Image" />
+        <h5 class="text-subTextColor md:text-[23px]">
+          Search Engine Optimization
+        </h5>
+       </div>
+        <p class="text-[18px] text-textColor font-[400]">Rank higher on search engine results like to boost your online presence</p>
       </div>
+      <div class="flex flex-col w-[287px]  space-y-6 ">
+        <div class="w-[287px] h-[240px] rounded-[12px] space-y-3 bg-serviceBoxBg px-10 py-16">
+         <img src="./images/services/services_icon2.png" class="w-[74px]" alt="SEO Image" />
+         <h5 class="text-subTextColor md:text-[23px]">
+          Website design & Development
+         </h5>
+        </div>
+         <p class="text-[18px] text-textColor font-[400]">We create high performance UX designs for websites, apps and e-commerce experiences</p>
+       </div>
+       <div class="flex flex-col w-[287px] space-y-6 ">
+        <div class="w-[287px] h-[240px] rounded-[12px] space-y-3 bg-serviceBoxBg px-10 py-16">
+         <img src="./images/services/services_icon3.png" class="w-[74px]" alt="SEO Image" />
+         <h5 class="text-subTextColor md:text-[23px]">
+          Content Writing
+         </h5>
+        </div>
+         <p class="text-[18px] text-textColor font-[400]">We create captivating content that drives action</p>
+       </div>
+       <div class="flex flex-col w-[287px] h-[240px] space-y-6 ">
+        <div class="w-[287px] h-[240px] rounded-[12px] space-y-3 bg-serviceBoxBg px-10 py-16">
+         <img src="./images/services/servies_icon4.png" class="w-[74px]" alt="SEO Image" />
+         <h5 class="text-subTextColor md:text-[23px]">
+          Graphics & Social media Marketing
+         </h5>
+        </div>
+         <p class="text-[18px] text-textColor font-[400]">We create award winning brand strategies for various digital content</p>
+       </div>
     </div>
+  </div>
 
-    <!-- Services Area -->
-    <div
-      class="text-center flex flex-col justify-center items-center pt-40 px-5"
-    >
-      <div class="service_area_container space-y-6">
-        <h1 class="services_title text-textColor">Our Services</h1>
-        <p
-          class="text-subTextColor w-100 md:w-[722px] services-subtitle text-[18px]"
-        >
-          Our team of creative professionals are experienced in crafting custom
-          digital solutions that drive customer engagement and loyalty.
-        </p>
-      </div>
+  <!-- Latest Works -->
 
-      <div
-        class="main_services flex flex-col md:flex-row items-center justify-between pt-20 space-y-5 md:pt-40 md:space-x-5 md:space-y-0"
-      >
-        <div
-          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
-        >
-          <h5 class="text-subTextColor md:text-[23px]">
-            Search Engine Optimization
-          </h5>
-        </div>
-        <div
-          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
-        >
-          <h5 class="text-subTextColor md:text-[23px]">
-            Website design & Development
-          </h5>
-        </div>
-        <div
-          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
-        >
-          <h5 class="text-subTextColor md:text-[23px]">Content Writing</h5>
-        </div>
-        <div
-          class="w-[287px] h-[240px] rounded-[12px] bg-serviceBoxBg px-10 py-20"
-        >
-          <h5 class="text-subTextColor md:text-[23px]">
-            Graphics & Social media Marketing
-          </h5>
-        </div>
-      </div>
-    </div>
-
-    <!-- Latest Works -->
-
-    <div
-      class="text-center flex flex-col justify-center items-center pt-40 px-5"
-    >
-      <div class="latest_work_container space-y-6">
-        <h1 class="latest_work_title text-textColor">Latest Work</h1>
-      <div class="flex flex-row justify-between items-center text-subTextColor space-x-8">
+  <div class="text-center flex flex-col justify-center items-center pt-40 px-5">
+    <div class="latest_work_container space-y-6">
+      <h1 class="latest_work_title text-textColor">Latest Work</h1>
+      <div class="flex flex-row justify-between items-center text-subTextColor space-x-8 sub-text">
         <p>All</p>
         <p>Website Design</p>
         <p>Mobile App</p>
         <p>Design Branding</p>
         <p>UI/UX</p>
       </div>
-      </div>
-
-      
     </div>
 
-    <script src="./js/script.js"></script>
-  </body>
+    <div class="pt-20 md:pt-40 grid grid-rows-3 grid-cols-3 gap-4">
+      <div>
+        <img src="./images/latest_work/latest_1.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/latest_work/latest_2.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/latest_work/latest_3.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/latest_work/latest_4.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/latest_work/latest_5.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/latest_work/latest_6.png" alt="" />
+      </div>
+    </div>
+    <button class="p-3 bg-buttonColor md:-mt-[250px] rounded-full text-white w-[147px] font-[500]">
+      See more
+    </button>
+  </div>
+
+
+  <!-- Testimonial Area -->
+  <div class="text-left flex flex-col justify-start items-start mt-[100px] pt-20 mb-[100px] h-[430px] px-5 bg-serviceBoxBg md:space-y-5 ">
+    <div class="testimonial_title_container md:px-40">
+      <h1 class="testimonial_title text-textColor">Testimonial</h1>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper flex flex-row items-center justify-between">
+        <div class="swiper-slide  space-x-5 bg-bg rounded-[12px]">
+          <div class="w-[422px] h-[191px] flex flex-col px-10 py-5 space-y-5">
+            <div class="flex flex-row space-x-4">
+              <div>
+                <img src="./images/testimonial/user1.png" alt="">
+              </div>
+              <div>
+                <h3 class="font-[700] text-[16px] text-textColor">Zoe Mantis</h3>
+                <p class="font-[400] text-[13px] text-subTextColor">Founder, Alpha Group</p>
+              </div>
+            </div>
+            <p class="text-textColor">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+          </div>
+        </div>
+        <div class="swiper-slide bg-bg rounded-[12px]">
+          <div class="w-[422px] h-[191px] flex flex-col px-10 py-5 space-y-5">
+            <div class="flex flex-row space-x-4">
+              <div>
+                <img src="./images/testimonial/user3.png" alt="">
+              </div>
+              <div>
+                <h3 class="font-[700] text-[16px] text-textColor">Zoe Mantis</h3>
+                <p class="font-[400] text-[13px] text-subTextColor">Founder, Alpha Group</p>
+              </div>
+            </div>
+            <p class="text-textColor">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+          </div>
+        </div>
+        <div class="swiper-slide bg-bg rounded-[12px]">
+          <div class="w-[422px] h-[191px] flex flex-col px-10 py-5 space-y-5">
+            <div class="flex flex-row space-x-4">
+              <div>
+                <img src="./images/testimonial/user1.png" alt="">
+              </div>
+              <div>
+                <h3 class="font-[700] text-[16px] text-textColor">Zoe Mantis</h3>
+                <p class="font-[400] text-[13px] text-subTextColor">Founder, Alpha Group</p>
+              </div>
+            </div>
+            <p class="text-textColor">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+          </div>
+        </div>
+        <div class="swiper-slide bg-bg rounded-[12px]">
+          <div class="w-[422px] h-[191px] flex flex-col px-10 py-5 space-y-5">
+            <div class="flex flex-row space-x-4">
+              <div>
+                <img src="./images/testimonial/user3.png" alt="">
+              </div>
+              <div>
+                <h3 class="font-[700] text-[16px] text-textColor">Zoe Mantis</h3>
+                <p class="font-[400] text-[13px] text-subTextColor">Founder, Alpha Group</p>
+              </div>
+            </div>
+            <p class="text-textColor">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- Testimonial Mobile menu -->
+  
+
+   <!-- Blog Area -->
+   <div class="md:px-40 px-5 blog">
+      <div class="swiper Blog_mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide bg-serviceBoxBg rounded-[23px] w-[559px]">
+              <div class="flex flex-row p-5 space-x-5">
+                <div>
+                  <img src="./images/blog/blog1.png" />
+                </div>
+                <div class="flex flex-col space-y-3">
+                 <div> <p class="text-[12px] font-[400] text-textColor">19 Feb, 2022/ By Admin</p></div>
+                  <div><h2 class="text-[26px] font-[500] text-textColor">UI/UX design Tips</h2></div>
+                  <div><p class="text-[18px] font-[400] leading-[25px] text-textColor">Promotion World has once placed
+                      PageTraffic among the top.</p>
+                    </div>
+                    <a href="#" class="text-blogLinkColor text-[18px]"><p>Read more <i class='bi bi-arrow-right-circle' ></i></p></a>     
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide bg-serviceBoxBg rounded-[23px] w-[559px]">
+                <div class="flex flex-row p-5 space-x-5">
+                  <div>
+                    <img src="./images/blog/blog1.png" />
+                  </div>
+                  <div class="flex flex-col space-y-3">
+                   <div> <p class="text-[12px] font-[400] text-textColor">19 Feb, 2022/ By Admin</p></div>
+                    <div><h2 class="text-[26px] font-[500] text-textColor">UI/UX design Tips</h2></div>
+                    <div><p class="text-[18px] font-[400] leading-[25px] text-textColor">Promotion World has once placed
+                        PageTraffic among the top.</p>
+                      </div>
+                      <a href="#" class="text-blogLinkColor text-[18px]"><p>Read more <i class='bi bi-arrow-right-circle' ></i></p></a>
+                          
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide bg-serviceBoxBg rounded-[23px] w-[559px]">
+                  <div class="flex flex-row p-5 space-x-5">
+                    <div>
+                      <img src="./images/blog/blog1.png" />
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                     <div> <p class="text-[12px] font-[400] text-textColor">19 Feb, 2022/ By Admin</p></div>
+                      <div><h2 class="text-[26px] font-[500] text-textColor">UI/UX design Tips</h2></div>
+                      <div><p class="text-[18px] font-[400] leading-[25px] text-textColor">Promotion World has once placed
+                          PageTraffic among the top.</p>
+                        </div>
+                        <a href="#" class="text-blogLinkColor text-[18px]"><p>Read more <i class='bx bx-right-arrow-alt' ></i></p></a>
+                            
+                    </div>
+                  </div>
+                </div>
+              
+          </div>
+          
+          <div class="swiper-pagination"></div>
+   </div>
+   </div>
+   <!-- End Blog Area -->
+
+   <!-- Subscribe Area -->
+
+   <div class="md:px-40 px-5  mt-20  md:mt-0 subscribe">
+    <div class="flex md:flex-row flex-col items-center justify-between">
+      <div class="flex md:flex-row flex-col items-center justify-center space-x-5 md:space-y-0 space-y-3">
+        <div>
+            <h3 class="md:text-[26px] text-[20px] font-[500] text-textColor">Subscribe to our Newsletter</h3>
+        </div>
+        <div class="bg-[#fff] md:w-[480px] w-100 flex flex-row pl-5 rounded-[23px] justify-between items-center">
+          <input class="bg-[transparent] text-[15px] text-[rgba(0, 0, 0, 0.54)] md:w-[380px] w-100 px-2 h-[40px]" placeholder="Enter your email" />
+          <button class="p-3 bg-buttonColor rounded-[23px] text-white font-[500]">
+              Subscribe
+            </button>
+        </div>
+      </div>
+      <div class="md:block hidden">
+        <img src="./images/subscibe.png" alt="Subscribe Image"/>
+      </div>
+    </div>    
+   </div>
+
+   <!--  End subscribe Area-->
+
+
+   <!-- Footer Area -->
+    <div class="h-[400px] bg-bg flex md:px-40 px-5 mt-20 w-full md:flex-row flex-col items-start justify-between footer md:space-y-0 space-y-10">
+    <div class="flex flex-col space-y-10 md:w-1/3 w-100">
+        <div>
+            <img src="./images/logo.png" class="md:-mx-[75px] " alt="Maraya Logo"/>
+        </div>
+        <div class="md:w-[358px] w-[258px]">
+          <p class="text-textColor leading-[36px]">We provide the best strategies to develop excellent branding to set you apart from competitors</p>
+        </div>
+        <div class="socials flex flex-row md:w-[300px] w-[150px] justify-between">
+          <i class="bi bi-facebook"></i>
+            <i class='bi bi-linkedin' ></i>
+            <i class='bi bi-twitter' ></i>
+            <i class='bi bi-youtube' ></i>
+        </div>
+    </div>
+    <div class="flex flex-col space-y-10 md:w-1/3 w-100">
+        <div>
+           <h1 class="text-footerColor text-[24px] uppercase font-[600]">Company</h1>
+        </div>
+        <div>
+          <ul class="text-textColor flex flex-col space-y-4">
+            <li>About</li>
+                <li>Services</li>
+                <li>Latest work</li>
+                <li> Testimonials</li>
+                <li>Blog</li>
+          </ul>
+        </div>
+    </div>
+    <div class="flex flex-col space-y-10 md:w-1/3 w-100">
+        <div>
+           <h1 class="text-footerColor text-[24px] uppercase font-[600]">Latest news</h1>
+        </div>
+        <div class="flex flex-col space-y-10 w-100">
+          <div class="grid grid-cols-2 gap-1">
+            <div>
+              <img src="./images/footer/footer1.png" />
+            </div>
+            <div class="md:-mx-[60px] space-y-2">
+              <h1 class="md:text-[18px] text-[10px] font-[500] text-textColor">Per Click Management</h1>
+              <div class="md:w-[171px] w-[120px] leading-[20px]">
+                  <p class="text-subTextColor md:text-[12px] text-[10px] font-[400]">PageTraffic is a premier Search Engine Marketing ( SEM.</p>
+                <li class="text-[10px] font-[400] text-subTextColor">15 April 2021</li>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-1">
+              <div>
+                <img src="./images/footer/footer2.png" />
+              </div>
+              <div class="md:-mx-[60px] space-y-2">
+                <h1 class="md:text-[18px] text-[10px] font-[500] text-textColor">Per Click Management</h1>
+                <div class="md:w-[171px] w-[120px] leading-[20px]">
+                    <p class="text-subTextColor md:text-[12px] text-[10px] font-[400]">PageTraffic is a premier Search Engine Marketing ( SEM.</p>
+                  <li class="text-[10px] font-[400] text-subTextColor">15 April 2021</li>
+                </div>
+              </div>
+            </div>
+    </div>
+    </div>
+   <!-- End Footer Area -->
+  
+  <script src="./js/script.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+
 </html>
